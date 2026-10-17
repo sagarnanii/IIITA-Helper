@@ -1,0 +1,439 @@
+=== Deans of the Institute ===
+Deans of The Institute
+Prof. Anupam
+,
+Dean (Dean-Alumni & External Relations)
+Prof. Pavan Chakraborty
+,
+Dean (Dean-Academic Affairs)
+Prof. Satish Kumar Singh
+,
+Dean (Dean-Planning & Development)
+Prof. Akhilesh Tiwari
+,
+Dean (Faculty Affairs)
+Prof. Ashutosh Mishra
+,
+Dean (Dean-IT & Digital Infrastructure)
+Prof. Krishna Pratap Singh
+,
+Dean (Student Affairs )
+Prof. Pramod Kumar
+,
+Dean (Dean-Research & Innovations Affairs)
+
+=== Faculty of the Institute ===
+IIIT-Allahabad | Academics | Department
+Department
+Department of Applied Science
+Dr. Abdulla Bin Abu Baker
+Ph.D.
+Research Interests:
+.
+Dr. Srijit  Bhattacharjee
+Ph.D.
+Research Interests:
+Quantum Field Theory, Gravitation, Black Holes, Cosmology, Holography.
+Prof. Pramod Kumar
+Head of the Department (Applied Science)
+Ph.D.
+Research Interests:
+Magnetocaloric effect, Shape-memory alloy, Negative magnetization, Spin wave dynamics, Strongly correlated electron systems, Hall and quantum hall effect,	Graphene 
+
+(Preparation and device fabrication), Scanning tunneling microscopy, Topological Insulator, Photovoltaic effects
+Prof. T. Lahiri
+Ph.D.
+Research Interests:
+Development of algorithms on Fractal simulation model and fractal measure, digital image processing, digital signal processing, soft computing models (Artificial neural network, 
+
+fuzzy logic, genetic algorithm and their combinations), pattern recognition and to use them in Biomedical, Bioinformatics and other fields.
+Prof. Ashutosh Mishra
+Ph.D.
+Research Interests:
+Bioelectrics, Biomechanics, Learning Machines, Distributed Computation and Modeling/Simulation, Biomedical Signals & Processing
+Prof. Krishna Misra
+Ph.D.
+Research Interests:
+Bio-Technology, Natural Products, Nuclic acid, DNA, RNA.
+Dr. Nidhi Mishra
+Ph.D.
+Research Interests:
+Synthetic Medicinal Chemistry and Natural
+Product Chemistry
+Dr. Amit Prabhakar
+Ph.D.
+Research Interests:
+Clinical diagnostics using various detection based Lab on chip and nanofabricated devices, Bio-mems, Immunoassay lab-on-a-chip devices, Real-time PCR chip based detection 
+
+technology, Flow cytometer chip, Cell sorting chip, Cell electroporation, Cellular-chip for single cell analysis, On chip bacterial
+growth studies, Blood on chip analysis, Dielectrophoresis (DEP) chip, Electrophoresis chip, Biosensing using novel techniques (i.e. based on nanowires, quantum dots etc.) with 
+
+conventional approaches and conventional techniques with novel approaches, MEMS drug delivery systems and micropumps,
+Clinical therapeutics using nanomaterials, Implantable biomedical devices,
+Nanotechnology
+Dr. Ratan K. Saha
+,
+Co-ordinating Head 1st Year B.Tech.
+Ph.D.
+Research Interests:
+Ultrasonic imaging and tissue characterization, Photoacoustic imaging and tissue characterization
+Dr. Upendra Kumar
+Ph.D.
+Research Interests:
+Experimental Condensed Matter Physics; Electroceramics; Renewable Energy Sources.
+Dr. Amaresh Kumar Sahoo
+Ph.D.
+Research Interests:
+Nanobiotechnology
+Dr. Sintu Kumar Samanta
+Ph.D.
+Research Interests:
+Signal transduction in Mycobacterium tuberculosis
+Dr. B.S. Sanjeev
+Ph.D.
+Research Interests:
+Structural Biology, Parallel Computing.
+Dr. Sangeeta Singh
+Ph.D.
+Research Interests:
+Biofilms, Stem Cells, Biologicals Characterization, Pathogens Detection And Characterization
+Prof. Sanjai Singh
+Ph.D.
+Research Interests:
+Structural. Electronic and Optical Properties of Nanostructures, 
+Structural and Electronic properties of High Tc Superconducting Materials, 
+Quantum Computing.
+Prof. Akhilesh Tiwari
+,
+Ph.D.
+Research Interests:
+Photonic Crystals, Photonic band gap
+materials, Left handed materials, Heat and mass transfer (specific to
+space and biotechnologcal applications), Space environmental modeling
+(Theoretical & Experimental).
+Dr. Anand Kumar Tiwari
+Ph.D.
+Research Interests:
+Combinatorial Topology
+Dr. Sumit Kr. Upadhyay
+Ph.D.
+Research Interests:
+Commutative Algebra, Algebraic Geometry and Cryptography
+Prof. Pritish Kr. Varadwaj
+Ph.D.
+Research Interests:
+Computer Aided Drug Designing and Delivery, Molecular Structure Prediction and Visualisation, Cheminformatics and Molecular Modeling
+Dr. Saurabh Verma
+Ph.D.
+Research Interests:
+Fractal Geometry, Approximation Theory
+Department of Electronics and Communication Engineering
+Dr. Sitangshu Bhattacharya
+Ph.D.
+Research Interests:
+Computational Nanoelectronics-Physics of electron and
+phonon transport in mono/bilayer/molecular based devices such as graphene,
+complex materials, dichalcogenides, etc., Nanoscale energy transport and
+conversions:-bulk and nanoscale thermoelectrics and solar cell devices.
+Dr. Ramesh Kumar Bhukya
+Ph.D.
+Research Interests:
+Speech Signal Processing, Automatic Speaker Recognition, Speech Analysis, Speech Recognition, Speech Enhancement, Emotion Analysis based on Speech and Image, Speech Pathology Detection, Digital Signal Processing, Image Processing and Computer Vision, Pattern Recognition and Artificial Intelligence, Biomedical Signal Processing
+Dr. Shanti Chandra
+Ph.D.
+Research Interests:
+Digital Signal Processing, Biomedical Signal Processing, Wavelet and multirate signal processing Image Processing and Computer Vision, Pattern Recognition and Artificial Intelligence
+Dr. Radhika Gour
+Ph.D.
+Research Interests:
+Device-to-Device (D2D) Communication, NOMA, Internet of Things (IoT), Resource Optimization, Cooperative Communication, Vehicular Communication
+Prof. Manish Goswami
+Ph.D.
+Research Interests:
+Low Power Circuit design, Analog and Mixed Signal VLSI Design, Data Converters, Memory Design.
+Dr. Kavindra Kandpal
+Ph.D.
+Research Interests:
+Research Interests: Analog & mixed signal IC Design: modulator, comparators, data converters and current references and bandgap reference circuits design,
+Display Electronics: Pixel driving circuits, TFT Fabrication & device modeling, SPICE/ Verilog-A models, Large area electronics, biosensors.
+Dr. Prasanna Kumar Misra
+Ph.D.
+Research Interests:
+Analog/RF Integrated Circuits,VLSI Systems, Energy Efficient Circuits.
+Dr. Pooja Mishra
+Ph.D.
+Research Interests:
+Polarimetric Applications on Synthetic Aperture Radar (SAR) Images , Satellite Image Processing, Microwave Remote Sensing, SAR Image classification, Electromagnetic wave 
+interaction with various media and Electromagnetic Modelling.
+Dr. Rekha Verma
+Ph.D.
+Research Interests:
+Thermo effects in light emitting transistors and photovoltaics, Electrical contact resistance for metal-semiconductor junctions, electro-thermal analysis in 2-D materials.
+Prof. Neetesh Purohit
+Ph.D.
+Research Interests:
+Modern Wireless communication technology (CDMA, OFDMA, MIMO etc.), Digital
+Communication system (Wired and wireless), Development and deployment of
+Wireless sensor networks, Digital signal processing Techniques, Antenna
+engineering, Computer Networks.
+Dr. Sunny Sharma
+Ph.D.
+Research Interests:
+Microelectronics and VLSI Design, Micro and Nano Fabrication, Sensor Information Processing and Pattern Recognition
+Dr. Surya Prakash
+Ph.D.
+Research Interests:
+Dr. Ashutosh Kumar Singh
+,
+Head of the Department (Electronics)
+Ph.D.
+Research Interests:
+Wireless Sensor Networks,Adhoc Networks, Artificial Intelligence,Fuzzy Systems,Instrumentation, Automatic Control Systems,Nonlinear Systems,Measurements,Power Electronics,Electronic Devices, Modern Industrial Drives,Electrical Machines.
+Prof. Rajat Kumar Singh
+,
+Ph.D.
+Research Interests:
+Photonic Packet Switch Architecture, Optical Data Storage, Optical Networks and Switching.
+Dr. Amar Nath Yadav
+Ph.D.
+Research Interests:
+Microwave circuits, Millimetre-wave circuits and Antennas.
+Dr. Boddepalli SanthiBhushan
+Ph.D.
+Research Interests:
+Nano/Micro-Electronics, VLSI Design, Device Modelling, Energy Conversion and Storage, Two Dimensional and One Dimensional Materials for Device Applications, Molecular Electronics.
+Dr. Suneel Yadav
+Ph.D.
+Research Interests:
+Cooperative Relaying Communications, MIMO Relaying Communications, Device-to-Device Communications, Physical Layer Secrecy in Cogerative Cognitive Relying Networks, Cognitive Radio, and Signal Processing.
+Department of Information Technology
+Prof. Anupam Agrawal
+Ph.D.
+Research Interests:
+Graphics and Visual Computing, Computer Vision, Pattern Recognition and Image Processing, AI, Artificial Neural Networks, Rough and Fuzzy Sets, Softcomputing, Multimedia 
+Information Procesing, Information Retrieval, Human-Computer Interaction, Remote Sensing and GIS, Computational Geometry and Software Engineering.
+Prof. Sonali Agarwal
+Ph.D.
+Research Interests:
+Advance Data Mining, Big Data Mining, Big Data Storage and Computing
+Tools, Support Vector Machine, Twin Support Vector Machine, Data Mining
+applications in Healthcare and E Governance.
+Prof. Pavan Chakraborty
+Ph.D.
+Research Interests:
+Human Gait Analysis, Human Prosthetics, Bio-metrics, Image Processing, Graphics and Visual Computing, Graphical Projections, Robotics & Instrumentation, Real Time Simulation, High Performance Computing (HPC), Artificial Life Simulation and Intelligence, Human Computer Interaction, Astronomy and Astrophysics, Large Astronomical Data Analysis, Cometary Jets Simulation,
+Dr. Anshu S. Anand
+,
+Ph.D.
+Research Interests:
+Parallel Computing, Distributed Computing, High Performance Computing (HPC), Computational Science
+Dr. Vijay Kumar Chaurasiya
+Ph.D.
+Research Interests:
+Wireless and Mobile Networks.
+Dr. M.S. Dinesh
+Ph.D.
+Adjunct Professor:
+Principal Scientist, Philips Research India
+Dr. Bibhas Ghoshal
+Ph.D.
+Research Interests:
+Secured and Energy Efficient Embedded Systems, Internet of Things, Resource Constrained AI, High Performance Computing Systems
+Dr. Anjali Gautam
+Ph.D.
+Research Interests:
+Biomedical Image Analysis, Image Processing, Pattern Recognition, Machine Learning
+Prof. Artus Krohn-Grimberghe,
+Ph.D.
+Adjunct Professor:
+University of Pederborn, Germany
+Dr. Mohammed Javed
+Ph.D.
+Research Interests:
+Image Processing, Pattern Recognition, Data Compression, Compressed Domain Processing and Analysis, Big Data Analytics
+Dr. Rahul Kala
+Ph.D.
+Research Interests:
+Robot Planning, Multi-Robot Coordination, Intelligent Vehicles,
+Intelligent Transportation Systems, Neural Networks, Evolutionary
+Algorithms, Hybrid Soft Computing, Classification, Related areas of
+Robotics, Soft Computing, Artificial Intelligence and Pattern Recognition
+Dr. J. Kokila
+Ph.D.
+Research Interests:
+Hardware Security, IoT security, Blockchain Technology, SoC Platform,  and Computer Architecture.
+Prof. Manish Kumar
+,
+Head of the Department (IT)
+Ph.D.
+Research Interests:
+Data Management in Wireless Sensor Network, Database Systems, Data Mining, Distributed Databases, Mobile Data Management
+Dr. Soumyadev Maity
+Ph.D.
+Research Interests:
+Network Security, Information Security, Cryptography, Secure Routing, Intrusion Detection, Security in IoT, Security in ITS.
+Dr. Nabajyoti Mazumdar
+Ph.D.
+Research Interests:
+Wireless sensor network, Internet of Things, Cloud Computing
+Dr. Subraya MS
+Ph.D.
+Adjunct Professor:
+Vice President, Dean and Head of Global Education Center (GEC), Infosys Limited
+Prof. G.C. Nandi
+Ph.D.
+Research Interests:
+Soft computing, Artificial Intelligence, Robotics and Industrial automation, Advanced Artificial Intelligence, Computer Controlled Systems, Humanoid robots , Machine vision and 
+
+processing
+Dr. Triloki Pant
+Ph.D.
+Research Interests:
+Satellite Image Analysis, Fractal Geometry for Imaging
+Dr. Gaurav Srivastava
+Ph.D.
+Research Interests:
+Combinatorial optimization using heuristic / Metaheuristic techniques, Evolutionary Algorithms, Vehicle Routing Problems, Multiobjective Optimization
+Dr. Jagpreet Singh
+Ph.D.
+Research Interests:
+Parallel & distributed systems, scheduling theory, operating systems, real-time systems, adhoc network, wireless sensors networks.
+Dr. Navjot Singh
+Ph.D.
+Research Interests:
+Salient Object Detection, Image Processing, Computer Vision, Machine Learning, Pattern Recognition, Biomedical Image Processing, Intelligent Transportation Systems.
+Prof. K. P. Singh
+Ph.D.
+Research Interests:
+Machine Learning, Optimization and Evolutionary Algorithms.
+Prof. Satish K. Singh
+Ph.D.
+Research Interests:
+Digital Image Processing, Data-compression, Biometrics
+Systems (Hand, Finger-print, Face, Multimodal, etc.), Pattern Recognition
+and Digital Image Watermarking.
+Prof. Vrijendra Singh
+Ph.D.
+Research Interests:
+Blind Source Separation, Independent Component Analysis, Biomedical Analysis, Artificial Neural Networks, Data Mining, Image & Audio Processing, Digital Signal Processing, Computational Neuroscience
+Dr. Naveen Saini
+Ph.D.
+Research Interests:
+Text Mining, Scholarly Data Mining, Information Retrieval, Multi-objective optimization, Evolutionary Algorithms, Machine Learning, Artificial Intelligence
+Prof. U.S. Tiwary
+Ph.D.
+Research Interests:
+Image Processing, Computer Vision, Medical Image Processing, Pattern Recognition & Script Analysis,  
+Digital Signal Processing, Speech and Language Processing, Wavelet Transform, Soft Computing & Fuzzy Logic, Neuro–computing and Soft-computers, Speech driven computers, Natural 
+
+Language Processing, Brain Simulation, Cognitive Science
+Dr. Abhishek Vaish
+Ph.D.
+Research Interests:
+Information Security, Cyber Law, Risk Management, Network Threat Protection.
+Prof. S. Venkatesan
+Ph.D.
+Research Interests:
+Network &Information Security, Cloud Computing and Social Network Privacy, Mobile Agent Security
+Prof. Shekhar Verma
+Ph.D.
+Research Interests:
+Wireless Networks, Cryptography, Wireless Sensor Networks, Multimedia, Networks.
+Prof. O.P. Vyas
+Ph.D.
+Research Interests:
+Data Mining and Business Intelligence, Mobile Adhoc Networks and Wireless Sensor networks, Future Internet, Software Engineering
+Dr. Ranjana Vyas
+Ph.D.
+Research Interests:
+Business Intelligence, Data Mining, Information Systems Strategy
+Dr. Shiv Ram Dubey
+Ph.D.
+Research Interests:
+Computer Vision, Deep Learning, Image Processing, Biometrics, Medical Imaging, Convolutional Neural Networks, Image Feature Description, Content Based Image Retrieval, Image-to-Image Transformation, Face Detection and Recognition, Facial Expression Recognition, Texture and Hyperspectral Image Analysis
+Dr. Muneendra Ojha
+Ph.D.
+Research Interests:
+Research interest: Reinforcement Learning,  Multi-Agent Systems, Deep Learning, Machine Learning, Natural Language Processing, Video Analytics, Semantic Web, Multi-Objective Optimization, Swarm and Evolutionary Algorithms
+Subjects taught: Introduction to Computer Programming, Data Structures, Operating Systems, Python Programming, Formal Languages, and Automata Theory, Compiler Design, Introduction to Machine Learning, Convolutional Neural Networks, Artificial Intelligence, Deep Learning, Natural Language Processing, Data Mining
+Department of Management Studies
+Dr. Sudipta Das
+Ph.D.
+Research Interests:
+Corporate Finance, Financial Modelling, Investments, Financial Econometrics, Research Methodology,
+Dr. Utkarsh Goel
+Ph.D.
+Research Interests:
+Corporate Finance, IT& BFSI, Efficiency Analysis, Investments
+Prof. Shailendra Kumar
+,
+Head of the Department (Management Studies)
+Ph.D.
+Research Interests:
+Corporate Finance, Capital Market related issues,
+Investment Management.
+Dr. Saurabh Mishra
+Ph. D.
+Research Interests:
+Conversion rate optimization, ORM, e-business, e-marketing, fuzzy optimization.
+Prof. Madhvendra Misra
+D.Phil.
+Research Interests:
+Sales promotion, Consumer Behavior, Information Strategy & IT enabled Services
+Dr. Shashi Kant Rai
+D.Phil.
+Research Interests:
+Information systems Identity, Privacy and Trust Management Data and Policy Management, perishable food product supply chain coordination.
+Dr. Pragya Singh
+Ph.D.
+Research Interests:
+Marketing, consumer behaviour, rural marketing, Advertising and brand
+management,Entrepreneurship development, Investment management and
+related areas.
+Prof. Ranjit Singh
+Ph.D.
+Research Interests:
+Behavioural Finance, Security Analysis and Protfolio Management, Islamic Finance
+Prof. Vijaishri Tewari
+Ph.D.
+Research Interests:
+Human Resource Management, Organisational Behavior
+Dr. Vineet Tiwari
+Ph.D.
+Research Interests:
+Energy and Environment Modelling, Energy and Environment Policy Analysis, Water Modelling, Climate Change, Operations
+Prof. Anurika Vaish
+Ph.D.
+Research Interests:
+Economics, Accounting & Finance, Digital Divide and E-governance, Operation Management and related issues
+*GF Stands for Guest Faculty
+
+=== Officers of the Institute ===
+List of Officers
+Dr. Mandar Subhash Karyakarte
+Registrar
+Dr. Asheesh Kumaar
+Joint Registrar (AAA)
+Dr. Seema Shah
+Joint Registrar (COW)
+Dr. Pavan Kumar Saini
+Joint Registrar (Establishment)
+Mr. Rajendra Kumar Jena
+Joint Registrar (Library)
+Dr. Mithilesh Kumar Mishra
+Technical officer (SS)
+Mr. Y.K. Gautam
+Deputy Registrar(S & Purchase)
+Dr. Kanchan Kumar Tiwari
+Asstt. Registrar (Finance & Accounts)
+Mr. Ajay Kumar Tiwari
+Technical officer (SS)
+Mr. Ranjeet Banerjee
+Asstt. Registrar (S & P)
+Mr. Vivek Nagar
+Asstt. Registrar (AAA)
+Mr. Niranjan Kumar
+Asstt. Registrar (audit)
+Mr. Jayant Biswas
+Asstt. Registrar (IRI)
+

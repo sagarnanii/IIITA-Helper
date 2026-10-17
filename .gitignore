@@ -1,0 +1,18 @@
+# Sensitive configuration files
+.env
+
+# Scratch & temporary diagnostic scripts
+scratch/
+check_db.py
+test_key.py
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+.streamlit/config.toml
+.DS_Store
+*.DS_Store
