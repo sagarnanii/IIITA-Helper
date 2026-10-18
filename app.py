@@ -33,6 +33,21 @@ ATLAS_INDEX           = os.getenv("ATLAS_VECTOR_SEARCH_INDEX", "vector_index")
 
 import auth
 from pymongo import MongoClient
+from datetime import datetime, timezone
+from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
+from langchain_mongodb import MongoDBAtlasVectorSearch
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+
+# Cached AI resources for high-speed query execution
+@st.cache_resource(show_spinner=False)
+def get_gemini_embeddings():
+    return GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", google_api_key=GEMINI_API_KEY)
+
+@st.cache_resource(show_spinner=False)
+def get_gemini_llm():
+    return ChatGoogleGenerativeAI(model="gemini-3.8-flash", google_api_key=GEMINI_API_KEY, temperature=0.2)
 
 # Initialize MongoDB client for authentication/seeding/audit logs
 try:
@@ -207,7 +222,7 @@ st.markdown(f"""
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 /* Typography & Reset */
-* {{
+*:not([class*="material-symbols"]):not([class*="material-icons"]):not([data-testid="stIconMaterial"]) {{
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     box-sizing: border-box;
 }}
@@ -494,16 +509,55 @@ section[data-testid="stSidebar"] {{ display: none; }}
     box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3) !important;
 }}
 
-/* ── TRUE CIRCULAR SEND BUTTON ── */
+/* ── Neat Modern Form Submit Buttons (Sign In / Create Account) ── */
 div[data-testid="stFormSubmitButton"] {{
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 0 !important;
+    margin: 0.5rem 0 0 0 !important;
     padding: 0 !important;
+    width: 100% !important;
 }}
 
 div[data-testid="stFormSubmitButton"] > button {{
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 46px !important;
+    border-radius: 9px !important;
+    padding: 0.6rem 1.2rem !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-size: 0.94rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.28) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}}
+
+div[data-testid="stFormSubmitButton"] > button:hover {{
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4) !important;
+    transform: translateY(-1px) !important;
+    color: #ffffff !important;
+}}
+
+div[data-testid="stFormSubmitButton"] > button:active {{
+    transform: translateY(0) !important;
+}}
+
+/* ── Scoped Chat Prompt Send Button (True Circular Action Button) ── */
+div[data-testid="stForm"]:has(input[aria-label="Ask a campus query"]) div[data-testid="stFormSubmitButton"] {{
+    width: 44px !important;
+    margin: 0 !important;
+}}
+
+div[data-testid="stForm"]:has(input[aria-label="Ask a campus query"]) div[data-testid="stFormSubmitButton"] > button {{
     width: 44px !important;
     height: 44px !important;
     min-width: 44px !important;
@@ -511,27 +565,55 @@ div[data-testid="stFormSubmitButton"] > button {{
     border-radius: 50% !important;
     padding: 0 !important;
     margin: 0 auto !important;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%) !important;
+    font-size: 1.25rem !important;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.32) !important;
+}}
+
+div[data-testid="stForm"]:has(input[aria-label="Ask a campus query"]) div[data-testid="stFormSubmitButton"] > button:hover {{
+    transform: scale(1.08) !important;
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.45) !important;
+}}
+
+/* ── Password Visibility Toggle: Replace ligature with clean 'Show' / 'Hide' ── */
+button[aria-label="Show password"] span,
+button[aria-label="Hide password"] span {{
+    display: none !important;
+}}
+
+button[aria-label="Show password"]::after {{
+    content: "Show" !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: #4f46e5 !important;
+    padding: 0 4px !important;
+    cursor: pointer !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}}
+
+button[aria-label="Hide password"]::after {{
+    content: "Hide" !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    padding: 0 4px !important;
+    cursor: pointer !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}}
+
+button[aria-label="Show password"],
+button[aria-label="Hide password"] {{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    min-width: 46px !important;
+    height: 100% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%) !important;
-    color: #ffffff !important;
-    border: none !important;
-    font-size: 1.25rem !important;
-    font-weight: 800 !important;
-    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.32) !important;
+    padding: 0 8px !important;
     cursor: pointer !important;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}}
-
-div[data-testid="stFormSubmitButton"] > button:hover {{
-    transform: scale(1.1) !important;
-    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.45) !important;
-    color: #ffffff !important;
-}}
-
-div[data-testid="stFormSubmitButton"] > button:active {{
-    transform: scale(0.95) !important;
 }}
 
 /* Hide default chat avatars to completely eliminate any browser or Streamlit default emojis */
@@ -664,13 +746,8 @@ div[data-testid="stChatMessage"]:has(div[data-testid="chatAvatarIcon-assistant"]
 small[data-testid="InputInstructions"] {{ display: none !important; }}
 [data-testid="InputInstructions"] {{ display: none !important; }}
 
-/* ── Auth Card ── */
-.clean-auth-card {{
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 2rem 1.8rem;
-    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+/* ── Auth Tabs Styling ── */
+.auth-wrapper {{
     max-width: 520px;
     margin: 0 auto;
 }}
@@ -744,13 +821,6 @@ if st.session_state["auth_token"]:
 
 # ── RAG Function ──────────────────────────────────────────────────────────────
 def ask(query: str, username: str, user_role: str):
-    from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-    from langchain_mongodb import MongoDBAtlasVectorSearch
-    from langchain_core.prompts import ChatPromptTemplate
-    from langchain_core.output_parsers import StrOutputParser
-    from langchain_core.runnables import RunnablePassthrough
-    from datetime import datetime, timezone
-
     ROLE_HIERARCHY = {
         "public": ["public"],
         "student": ["public", "student"],
@@ -759,39 +829,23 @@ def ask(query: str, username: str, user_role: str):
     }
     allowed_levels = ROLE_HIERARCHY.get(user_role, ["public"])
 
-    use_local_search = False
-    col_local = None
-    try:
-        client_local = MongoClient(
-            MONGO_URI, tls=True,
-            tlsAllowInvalidCertificates=True,
-            tlsAllowInvalidHostnames=True,
-            serverSelectionTimeoutMS=2000,
-        )
-        client_local.admin.command('ping')
-        col_local = client_local[MONGO_DB_NAME][MONGO_COLLECTION_NAME]
-    except Exception as conn_err:
-        print(f"[DB] Atlas connection failed for query: {conn_err}. Using local search fallback.")
-        use_local_search = True
-
     source_docs = []
+    use_local_search = is_mock_db or not db
+
     if not use_local_search:
         try:
-            emb = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", google_api_key=GEMINI_API_KEY)
-            vs  = MongoDBAtlasVectorSearch(collection=col_local, embedding=emb, index_name=ATLAS_INDEX)
-            
-            ret = vs.as_retriever(search_kwargs={
-                "k": 4,
-                "pre_filter": {
-                    "access_level": {"$in": allowed_levels}
-                }
-            })
-            source_docs = ret.invoke(query)
+            emb = get_gemini_embeddings()
+            col_docs = db[MONGO_COLLECTION_NAME]
+            vs = MongoDBAtlasVectorSearch(collection=col_docs, embedding=emb, index_name=ATLAS_INDEX)
+            # High-speed Atlas Vector Search with candidate retrieval
+            raw_docs = vs.similarity_search(query, k=8)
+            # Filter strictly by user role permissions
+            source_docs = [d for d in raw_docs if d.metadata.get("access_level", "public") in allowed_levels][:4]
         except Exception as search_err:
             print(f"[DB] Atlas search execution failed: {search_err}. Falling back to local search.")
             use_local_search = True
 
-    if use_local_search:
+    if use_local_search and not source_docs:
         import local_vector
         try:
             source_docs = local_vector.search_local(query, allowed_levels, GEMINI_API_KEY, k=4)
@@ -799,7 +853,7 @@ def ask(query: str, username: str, user_role: str):
             print(f"[LOCAL ERROR] Local search fallback failed: {local_err}")
             source_docs = []
 
-    llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash", google_api_key=GEMINI_API_KEY, temperature=0.2)
+    llm = get_gemini_llm()
 
     today = date.today().strftime("%B %d, %Y")
     prompt = ChatPromptTemplate.from_template(f"""\
@@ -824,11 +878,7 @@ Answer:""")
     
     # Audit logging
     try:
-        if use_local_search or st.session_state.get("is_mock_db", False):
-            db_audit = db
-        else:
-            db_audit = client_local[MONGO_DB_NAME]
-        audit_col = db_audit["audit_logs"]
+        audit_col = db["audit_logs"]
         audit_entry = {
             "user_id": username,
             "role": user_role,
@@ -871,8 +921,8 @@ if not st.session_state["auth_token"]:
     )
     st.markdown(landing_header, unsafe_allow_html=True)
 
-    with st.container():
-        st.markdown('<div class="clean-auth-card">', unsafe_allow_html=True)
+    _, col_auth, _ = st.columns([1, 2.2, 1])
+    with col_auth:
         tab_login, tab_register, tab_quick = st.tabs(["Sign In", "Create Account", "Quick Access"])
 
         with tab_login:
@@ -951,8 +1001,6 @@ if not st.session_state["auth_token"]:
                     st.session_state["username"] = "admin_test"
                     st.session_state["role"] = "admin"
                     st.rerun()
-
-        st.markdown('</div>', unsafe_allow_html=True)
 
     st.stop()
 
@@ -1280,22 +1328,37 @@ if st.session_state.get("active_view", "Assistant") == "Assistant":
     active_query = pending or (user_input if submitted else None)
 
     if active_query and active_query.strip():
-        st.session_state["messages"].append({"role": "user", "content": active_query.strip()})
+        user_text = active_query.strip()
+        st.session_state["messages"].append({"role": "user", "content": user_text})
         st.session_state["pending_query"] = None
 
-        with st.spinner("Consulting IIITA Knowledge Base..."):
-            try:
-                answer, sources = ask(active_query.strip(), st.session_state["username"], st.session_state["role"])
-            except Exception as e:
-                err_msg = str(e)
-                if "RESOURCE_EXHAUSTED" in err_msg or "429" in err_msg:
-                    answer = (
-                        "Gemini API daily quota exceeded. "
-                        "Please wait a few moments or configure an active API key in .env."
-                    )
-                else:
-                    answer = f"Service notice: Unable to complete query: {err_msg}"
-                sources = []
+        with chat_box:
+            with st.chat_message("user"):
+                st.markdown(user_text)
+
+            with st.chat_message("assistant"):
+                with st.spinner("Consulting IIITA Knowledge Base..."):
+                    try:
+                        answer, sources = ask(user_text, st.session_state["username"], st.session_state["role"])
+                    except Exception as e:
+                        err_msg = str(e)
+                        if "RESOURCE_EXHAUSTED" in err_msg or "429" in err_msg:
+                            answer = (
+                                "Gemini API daily quota exceeded. "
+                                "Please wait a few moments or configure an active API key in .env."
+                            )
+                        else:
+                            answer = f"Service notice: Unable to complete query: {err_msg}"
+                        sources = []
+
+                st.markdown(answer)
+                if sources:
+                    src_chips = "".join([f'<span class="source-tag-chip">Source: {s}</span>' for s in sources])
+                    st.markdown(f"""
+                    <div style="margin-top: 0.5rem; border-top: 1px solid #f1f5f9; padding-top: 0.35rem;">
+                        {src_chips}
+                    </div>
+                    """, unsafe_allow_html=True)
 
         st.session_state["messages"].append({
             "role": "assistant",
