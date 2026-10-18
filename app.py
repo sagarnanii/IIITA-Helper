@@ -879,28 +879,9 @@ if not st.session_state["auth_token"]:
             st.markdown('<p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.9rem;">Sign in with your institute account credentials:</p>', unsafe_allow_html=True)
             with st.form("login_form"):
                 login_user = st.text_input("Username", placeholder="e.g. student_test")
-                # Password field with show/hide toggle
-                st.caption("👁️ Click below to show/hide password")
-                pwd_container = st.container()
-                with pwd_container:
-                    input_gap = st.empty()
-                    with input_gap:
-                        login_pass = st.text_input("Password", type="password", placeholder="Password", label_visibility="collapsed")
-                    
-                    # Toggle password visibility with eye icon
-                    col1, col2 = st.columns([1, 1.5])
-                    with col2:
-                        if st.button("👁️ Show/Hide Password", use_container_width=True, type="secondary", help="Toggle password visibility"):
-                            st.session_state["show_password"] = not st.session_state.get("show_password", False)
-                    
-                    # Show password when toggle is active
-                    if st.session_state.get("show_password", False):
-                        login_pass = st.text_input("Password", placeholder="Password")
-                    else:
-                        login_pass = st.text_input("Password", type="password", placeholder="Password", label_visibility="collapsed")
-
-                
+                login_pass = st.text_input("Password", type="password", placeholder="Password")
                 login_submit = st.form_submit_button("Sign In →", use_container_width=True)
+
                 if login_submit:
                     if not login_user or not login_pass:
                         st.error("Please enter both username and password.")
@@ -926,25 +907,6 @@ if not st.session_state["auth_token"]:
             with st.form("register_form"):
                 reg_user = st.text_input("Username", placeholder="e.g. sagar_student")
                 reg_pass = st.text_input("Password", type="password", placeholder="At least 6 characters")
-                
-                st.caption("👁️ Click below to show/hide password")
-                pwd_container_reg = st.container()
-                with pwd_container_reg:
-                    input_gap_reg = st.empty()
-                    with input_gap_reg:
-                        reg_pass = st.text_input("Password", type="password", placeholder="At least 6 characters", label_visibility="collapsed")
-                    
-                    # Toggle password visibility with eye icon
-                    col1r, col2r = st.columns([1, 1.5])
-                    with col2r:
-                        if st.button("👁️ Show/Hide Password", use_container_width=True, type="secondary", help="Toggle password visibility"):
-                            st.session_state["show_password_reg"] = not st.session_state.get("show_password_reg", False)
-                    
-                    # Show password when toggle is active
-                    if st.session_state.get("show_password_reg", False):
-                        reg_pass = st.text_input("Password", placeholder="At least 6 characters")
-                    else:
-                        reg_pass = st.text_input("Password", type="password", placeholder="At least 6 characters", label_visibility="collapsed")
                 reg_role = st.selectbox("Campus Role", ["student", "faculty"])
                 reg_submit = st.form_submit_button("Create Account →", use_container_width=True)
 
